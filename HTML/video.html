@@ -1,0 +1,52 @@
+<!--
+1. The <video> tag acts as a container for the video player.
+2. The controls attribute adds the browser's default playback controls (play, pause, volume, etc.).
+width and height attributes define the dimensions of the player in pixels.
+3. The <source> element specifies the path to the video file using the src attribute 
+    and the MIME type using the type attribute.
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>HTML5 Video Player</title>
+
+<style>
+body {
+    background-color: #f6f8fa;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.player {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+video {
+    border-radius: 8px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="player">
+    <h2>HTML5 Video Player</h2>
+
+    <video width="400" controls>
+        <source src="../video/Jeff_Bezos_Motivates_me_always_and_I_find_myself.mp4" type="video/mp4">
+        Your browser does not support video.
+    </video>
+
+    <p><b> Jeff Bezos </b> Motivation video</p>
+</div>
+
+</body>
+</html>

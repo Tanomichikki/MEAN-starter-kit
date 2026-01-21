@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Learn CSS Selectors Through Code</title>
+
+    <style>
+        /* =====================================================
+           UNIVERSAL SELECTOR (*)
+           Definition: Selects ALL elements on the page.
+           Why used: To apply common styling like font, margin reset.
+           Common properties: font-family, margin, padding, box-sizing
+        ===================================================== */
+        * {
+            font-family: Verdana;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* =====================================================
+           ELEMENT SELECTOR (p)
+           Definition: Selects all HTML elements of a given tag name.
+
+           Why used: To style all similar elements consistently.
+
+           Common properties: color, font-size, line-height
+        ===================================================== */
+        p {
+            color: darkblue;
+            font-size: 16px;
+            line-height: 1.5;
+        }
+
+        /* =====================================================
+           ID SELECTOR (#mainTitle)
+           Definition: Selects a single, unique element using its id.
+
+           Rules:
+           - ID must be unique
+           - Represented using #
+
+           Why used: For styling important single elements.
+
+           Common properties: text-align, background-color, padding
+        ===================================================== */
+        #mainTitle {
+            text-align: center;
+            background-color: lightcoral;
+            padding: 10px;
+        }
+
+        /* =====================================================
+           CLASS SELECTOR (.note)
+           Definition: Selects all elements with the same class name.
+
+           Rules:
+           - Multiple elements can share same class
+           - Represented using .
+
+           Why used: Reusable styling.
+
+           Common properties: background, border, margin
+        ===================================================== */
+        .note {
+            background-color: lightyellow;
+            border-left: 5px solid orange;
+            margin: 10px;
+            padding: 10px;
+        }
+        
+        /* =====================================================
+           GROUPING SELECTOR (h2, h3, footer)
+           Definition: Groups multiple selectors to apply same style.
+
+           Why used: Avoid code repetition.
+
+           Common properties: color, border, margin
+        ===================================================== */
+        h2, h3, footer {
+            color: rgb(182, 2, 253);
+            border-bottom: 2px solid gray;
+            margin: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ID selector applied --> 
+    <h1 id="mainTitle">CSS Selectors – Learn by Reading Code</h1>
+
+    <!-- Element selector applied -->
+    <p>This paragraph is styled using ELEMENT selector.</p>
+
+    <!-- Class selector applied -->
+    <p class="note">This paragraph is styled using CLASS selector.</p>
+
+    <p class="note">Classes can be reused on multiple elements.</p>
+
+    <!-- Grouping selector applied -->
+    <h2>Section Heading</h2>
+    <h3>Sub Heading</h3>
+
+    <footer>Footer content styled using grouping selector</footer>
+
+</body>
+</html>
+

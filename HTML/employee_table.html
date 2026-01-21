@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>HTML5 Table from JavaScript Objects</title>
+
+<style>
+    table {
+        width: 70%;
+        border-collapse: collapse;
+        margin: 30px auto;
+    }
+
+    th, td {
+        border: 1px solid #444;
+        padding: 10px;
+        text-align: center;
+    }
+
+    thead {
+        background-color: #2c3e50;
+        color: white;
+    }
+
+    tfoot {
+        background-color: #ecf0f1;
+        font-weight: bold;
+    }
+</style>
+</head>
+
+<body>
+
+<h2 style="text-align:center;">Employee Salary Table</h2>
+
+<table id="empTable">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Department</th>
+            <th>Salary</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <!-- Data will be inserted here -->
+    </tbody>
+
+    <tfoot>
+        <tr>
+            <td colspan="3">Total Salary</td>
+            <td id="totalSalary">0</td>
+        </tr>
+    </tfoot>
+</table>
+
+<script>
+    // JavaScript Array of Objects (like API data)
+    const employees = [
+        { id: 1, name: "Ravi", department: "IT", salary: 50000 },
+        { id: 2, name: "Anita", department: "HR", salary: 45000 },
+        { id: 3, name: "Suresh", department: "Finance", salary: 60000 },
+        { id: 4, name: "Meena", department: "IT", salary: 55000 }
+    ];
+
+    const tbody = document.querySelector("#empTable tbody");
+    const totalCell = document.getElementById("totalSalary");
+
+    let total = 0;
+
+    employees.forEach(emp => {
+        const row = document.createElement("tr");
+
+        row.innerHTML = `
+            <td>${emp.id}</td>
+            <td>${emp.name}</td>
+            <td>${emp.department}</td>
+            <td>${emp.salary}</td>
+        `;
+
+        tbody.appendChild(row);
+        total += emp.salary;
+    });
+
+    // Update footer
+    totalCell.textContent = total;
+</script>
+
+</body>
+</html>

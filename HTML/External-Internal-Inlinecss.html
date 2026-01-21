@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>One Page CSS Types Example</title>
+
+    <!-- =====================================================
+         INTERNAL CSS
+         Definition:
+         CSS written inside <style> tag in the <head> section.
+
+         Why used:
+         - Applies to ONE HTML page
+         - Better than inline for multiple elements
+
+         Common properties:
+         color, background-color, margin, padding
+    ===================================================== -->
+    <style>
+        body {
+            font-family: Arial;
+            background-color: #f2f2f2;
+        }
+
+        h2 {
+            color: darkblue;
+            text-align: center;
+        }
+
+        .internalBox {
+            background-color: lightyellow;
+            border: 1px solid black;
+            padding: 10px;
+            margin: 15px;
+        }
+    </style>
+
+    <!-- =====================================================
+         EXTERNAL CSS (Linked)
+         Definition:
+         CSS written in a separate .css file and linked
+         using <link> tag.
+
+         Why used:
+         - Reusable across multiple pages
+         - Best practice in real applications
+
+         Example external.css content:
+         --------------------------------
+    ===================================================== -->
+    <link rel="stylesheet" href="../css/style1.css">
+</head>
+
+<body>
+
+    <!-- =====================================================
+         INLINE CSS
+         Definition:
+         CSS written directly inside HTML element
+         using style attribute.
+
+         Why used:
+         - Quick styling
+         - Applies to ONE element only
+
+         Disadvantage:
+         - Not reusable
+    ===================================================== -->
+    <h1 style="color: white; background-color: teal; padding: 10px;">
+        INLINE CSS Example
+    </h1>
+
+    <!-- INTERNAL CSS applied -->
+    <h2>INTERNAL CSS Example</h2>
+
+    <div class="internalBox">
+        This box is styled using INTERNAL CSS
+    </div>
+
+    <!-- EXTERNAL CSS applied -->
+    <div class="externalBox">
+        This box is styled using EXTERNAL CSS
+    </div>
+
+</body>
+</html>
