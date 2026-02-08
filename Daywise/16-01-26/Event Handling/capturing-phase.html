@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>      
+<meta charset="UTF-8">
+<title>Event Bubbling Demo</title>
+</head>
+<body>  
+    <div id="outer">
+        <button id="inner">Click Me</button>
+    </div>
+
+<script>
+        document.getElementById("outer").addEventListener("click", 
+        () => {
+        alert("Outer button clicked!");
+        });
+
+        document.getElementById("inner").addEventListener("click", 
+        () => {
+        alert("Button clicked!");
+});
+</script>
+
+
+</body>
+</html>

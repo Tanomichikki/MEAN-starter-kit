@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Fruit Picker</title>
+</head>
+<body>
+
+  <h2>Pick a Fruit</h2>
+
+  <input type="text" id="fruitInput" placeholder="Enter a fruit">
+  <button onclick="addFruit()">Add Fruit</button>
+
+  <ul id="fruits">
+    <li>Apple</li>
+    <li>Banana</li>
+  </ul>
+
+  <script>
+    function addFruit() {
+      const input = document.getElementById('fruitInput');
+      const fruits = document.getElementById('fruits');
+
+      if (input.value.trim() === '') {
+        alert('Please enter a fruit name');
+        return;
+      }
+
+      const li = document.createElement('li');
+      li.textContent = input.value;
+
+      fruits.appendChild(li);
+      input.value = '';
+    }
+  </script>
+
+</body>
+</html>

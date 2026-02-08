@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>      
+<meta charset="UTF-8">
+<title>Input change</title>
+</head>
+<body>  
+
+ <input type="text" id="name" placeholder="Enter name">
+<p id="output"></p>
+
+<script>
+let input = document.getElementById("name");
+input.addEventListener("input", () => {
+  document.getElementById("output").textContent = input.value.toUpperCase();
+});
+</script>
+
+
+
+</body>
+</html>
